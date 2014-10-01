@@ -12,10 +12,11 @@
 hs_err_pid*
 
 # Netbeans excludes - StevenLawson & JeromSar
-/nbproject/private/
+/nbproject/
 /dist/
 /build/
 manifest.mf
+build.xml
 
 # Eclipse excludes - JeromSar (old)
 .project
