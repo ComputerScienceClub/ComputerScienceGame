@@ -1,3 +1,6 @@
+/*
+ * Main class. Do not modify.
+ */
 package com.csclub;
 
 import org.lwjgl.*;
