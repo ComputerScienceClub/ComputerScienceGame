@@ -1,5 +1,7 @@
 package com.csclub;
 
+import org.lwjgl.*;
+
 public class ComputerScienceGame
 {
 
