@@ -12,5 +12,8 @@ package com.csclub;
  */
 public class AnotherClass 
 {
-    
+    public void sout(String s)
+    {
+        System.out.println(s);
+    }
 }
