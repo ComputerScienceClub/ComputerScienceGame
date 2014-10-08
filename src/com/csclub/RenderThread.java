@@ -49,8 +49,8 @@ public class RenderThread extends Thread
     {
         try
         {
-            Display.setDisplayMode(new DisplayMode(SCREEN_WIDTH, SCREEN_HEIGHT));
-            Display.setResizable(true);
+            Display.setFullscreen(true);
+            Display.setResizable(false);
             Display.create();
             Keyboard.create();
             Mouse.create();

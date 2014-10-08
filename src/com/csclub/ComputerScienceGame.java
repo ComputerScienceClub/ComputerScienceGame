@@ -23,5 +23,7 @@ public class ComputerScienceGame
     {
         render = new RenderThread();
         render.start();
+        update = new UpdateThread();
+        update.start();
     }
 }
