@@ -10,10 +10,13 @@ package com.csclub;
  *
  * @author ayates
  */
-public class AnotherClass 
+public class UpdateThread extends Thread
 {
-    public void sout(String s)
+
+    @Override
+    public void run()
     {
-        System.out.println(s);
+        
     }
+    
 }
