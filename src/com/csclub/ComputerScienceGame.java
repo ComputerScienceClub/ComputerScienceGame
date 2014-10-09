@@ -16,8 +16,9 @@ public class ComputerScienceGame
 {
 
     public static Thread render, update, input;
-    public static final String WINDOW_TITLE = "";
     public static final int SCREEN_WIDTH = 1000, SCREEN_HEIGHT = 500;
+    public static boolean displayClosed = false; //Sets true when display has been exited and/or quit; stop all renders and checks when this is true
+    public static int FPS = 60;
 
     public static void main(String[] args)
     {

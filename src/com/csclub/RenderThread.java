@@ -43,7 +43,7 @@ import static org.lwjgl.opengl.GL11.glViewport;
  * @author ayates
  */
 public class RenderThread extends Thread
-{    
+{
     @Override
     public void run()
     {
@@ -78,24 +78,24 @@ public class RenderThread extends Thread
             e.printStackTrace();            
         }
 
-        while (!Display.isCloseRequested())
+        while (!ComputerScienceGame.displayClosed)
         {
+            glClear(GL_COLOR_BUFFER_BIT | GL_STENCIL_BUFFER_BIT); //Clears screen of all graphics
+            glClear(GL_COLOR_BUFFER_BIT); //Clears screen of all graphics
             /**
              * Draw graphics past this comment
              */
-            glClear(GL_COLOR_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
-            glClear(GL_COLOR_BUFFER_BIT);
-            glPushMatrix();
-            glTranslatef(Display.getDisplayMode().getWidth() / 2 + 250, Display.getDisplayMode().getHeight() / 2, 0.0f);
-            glBegin(GL_QUADS);
-            glVertex2i(-50, -50);
-            glVertex2i(50, -50);
-            glVertex2i(50, 50);
-            glVertex2i(-50, 50);
-            glEnd();
-            glPopMatrix();
 
+            Tesselator tesselator = new Tesselator();
+            tesselator.setX(500).setY(500).setWidth(100).setHeight(500).drawQuadWithSize();
+
+            /////////////
+            //End drawing
             Display.update();
+
+            Display.sync(ComputerScienceGame.FPS); //"Sleep method", syncs rendering to a specified FPS
+
+            ComputerScienceGame.displayClosed = Display.isCloseRequested(); //Update state of displayClosed (set to closeRequest status)
         }
 
         Display.destroy();

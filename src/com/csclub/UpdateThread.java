@@ -6,20 +6,19 @@
 
 package com.csclub;
 
-import org.lwjgl.opengl.Display;
-
 /**
  *
  * @author ayates
  */
 public class UpdateThread extends Thread
 {
+
     @Override
     public void run()
     {
-        while (!Display.isCloseRequested())
+        while (!ComputerScienceGame.displayClosed)
         {
-            System.out.println("test");
+
         }
     }
 }
