@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.csclub;
 
 import static com.csclub.ComputerScienceGame.SCREEN_HEIGHT;
@@ -39,8 +34,7 @@ import static org.lwjgl.opengl.GL11.glVertex2i;
 import static org.lwjgl.opengl.GL11.glViewport;
 
 /**
- *
- * @author ayates
+ * This thread renders all graphics
  */
 public class RenderThread extends Thread
 {
