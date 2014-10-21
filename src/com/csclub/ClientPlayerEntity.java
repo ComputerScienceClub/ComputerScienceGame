@@ -3,7 +3,7 @@ package com.csclub;
 /**
  * This is the player controlled by THIS CLIENT.
  */
-public class ClientPlayerEntity implements Entity
+public class ClientPlayerEntity
 {
     private double x;
     private double y;
@@ -20,25 +20,21 @@ public class ClientPlayerEntity implements Entity
         this.y = y;
     }
 
-    @Override
     public void setX(double x)
     {
         this.x = x;
     }
 
-    @Override
     public double getX()
     {
         return x;
     }
 
-    @Override
     public void setY(double y)
     {
         this.y = y;
     }
 
-    @Override
     public double getY()
     {
         return y;
